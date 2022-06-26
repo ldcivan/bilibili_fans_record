@@ -1,0 +1,2 @@
+# bilibili_fans_record
+一个可以同时记录多个用户粉丝数变化为特定格式的txt文档的python程序。
