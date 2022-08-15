@@ -9,5 +9,9 @@ uids：目标用户的id号，格式参照示例即可。<br>
 <h5>进阶</h5>
 wait：一轮爬取中，每个目标数据的爬取间隔。若目标较少，且jump较大，则可以wait值可以较小。若目标较多或jump较小时，则wait不宜过小，以防止IP被ban。<br>
 可以将“文档”二字更改为你想要的文件夹名，该文件夹位于与主程序同级的目录上。<br>
-<br>
+<hr>
+<h5>关于定时器版本</h5>
+可在每日特定时间记录，而取消使用倒计时。更改time_interval的参数即可实现记录时间的更改。<b>注意：更改的参数时，应该严格保证time_interval的区间为1分钟。</b><br>
+您可以增删time_interval以增删记录时间点；增删time_interval时您应当同步增删相应的诸如 now_time in time_interval 的字段。<br>
+<hr><br>
 其他内容不建议更改。
