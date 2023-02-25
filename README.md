@@ -15,5 +15,8 @@ wait：一轮爬取中，每个目标数据的爬取间隔。若目标较少，�
 本版本中，jump为无效参数，可不予以理会。<br>
 更改time_interval的参数即可实现记录时间的更改。<b>注意：更改的参数时，应该严格保证time_interval的区间为1分钟。</b>(即time_interval = Interval("HH:MM:SS", "HH:MM+1:SS"))<br>
 您可以增删time_interval以增删记录时间点；增删time_interval时您应当同步增删相应的诸如 now_time in time_interval 的字段。<br>
+<h5>json版本的操作说明</h5>
+json版参数基本上与定时器版本一致，只是改用了json格式储存，机器可读性更好<br>
+具体实例可参考 我们制作的粉丝观测小站: http://www.pro-ivan.com/bilibili/
 <hr><br>
 其他内容不建议更改。
