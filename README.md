@@ -17,6 +17,7 @@ wait：一轮爬取中，每个目标数据的爬取间隔。若目标较少，�
 您可以增删time_interval以增删记录时间点；增删time_interval时您应当同步增删相应的诸如 now_time in time_interval 的字段。<br>
 <h5>json版本的操作说明</h5>
 json版参数基本上与定时器版本一致，只是改用了json格式储存，机器可读性更好<br>
+json版本推荐使用<code>.config</code>储存要观测的uid，其中用形如<code>[2,114514,1919810,...]</code>的格式储存即可<br>
 具体实例可参考 我们制作的粉丝观测小站: http://www.pro-ivan.com/bilibili/
 <hr><br>
 其他内容不建议更改。
