@@ -93,10 +93,11 @@ def timer(n):
             if info['code'] == 0:
                 fanss = info['data']['card']['fans']
                 names = info['data']['card']['name']
-                with open(path + "/up_info/" + str(uids[index]) + '.json', 'w') as f:
-                    if not os.path.exists(path + "/json/" + str(uids[index]) + '.json'):
-                        f.truncate()  # 清空文件
-                    json.dump(info, f)
+                if names != '账号已注销':  # 账号注销则不再更新info
+                    with open(path + "/up_info/" + str(uids[index]) + '.json', 'w', encoding='utf-8') as f:
+                        if not os.path.exists(path + "/json/" + str(uids[index]) + '.json'):
+                            f.truncate()  # 清空文件
+                        json.dump(info, f, ensure_ascii=False)
             else:
                 fanss = -1
                 names = "Null"
